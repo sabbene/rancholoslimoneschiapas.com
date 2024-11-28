@@ -7,7 +7,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: calc(100vh - 50px); /* Full viewport height minus 50px */
 }
 
 img {
