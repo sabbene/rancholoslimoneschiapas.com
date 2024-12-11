@@ -2,6 +2,9 @@
 body, html {
     height: 100%;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent scrollbars */
     font-family: Arial, sans-serif;
     background-color: #E2D4B1;
 }
@@ -11,7 +14,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 50px); /* Full height minus a small buffer */
+    height: calc(100vh - 1000px); /* Full height minus a small buffer */
     padding: 20px;
 }
 
@@ -28,6 +31,8 @@ body, html {
     justify-content: center;
     gap: 10px;
     padding: 20px;
+    height: 80px; /* Fixed height for the social media buttons */
+    box-sizing: border-box;
 }
 
 .social_button {
