@@ -37,7 +37,7 @@ body, html {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: #E2D4B1;
     color: #000000;
     text-decoration: none;
     transition: transform 0.2s, background-color 0.2s;
@@ -46,7 +46,7 @@ body, html {
 
 .social_button:hover {
     transform: scale(1.1);
-    background-color: #e2d4b1;
+    background-color: #e9e0cd;
 }
 
 .social_icon {
