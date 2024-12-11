@@ -35,8 +35,8 @@ body, html {
     max-width: 100%;
     max-height: 70%; /* Prevent logo from exceeding viewport height */
     height: auto;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+    border: 0px solid #ccc;
+    border-radius: 0px;
 }
 
 /* Social media container */
