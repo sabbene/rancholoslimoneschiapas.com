@@ -1,4 +1,4 @@
-/* Reset Styles */
+/* General Reset */
 body, html {
     margin: 0;
     padding: 0;
@@ -6,66 +6,62 @@ body, html {
     height: 100%;
     font-family: Arial, sans-serif;
     background-color: #E2D4B1;
-    overflow: hidden; /* Prevent scrolling */
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Prevent scrolling */
 }
 
-/* Wrapper for content */
-.content_wrapper {
+/* Main container */
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-/* Center container for the logo */
-.center_container {
-    flex: 1; /* Take up the available space */
+/* Logo container */
+.logo_container {
+    flex-grow: 1; /* Take up available space */
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* Logo styling */
-.logo img {
-    max-width: 70%; /* Scale logo to fit within the container */
+.logo_container img {
+    max-width: 70%; /* Scale to fit within the container */
     max-height: 70%; /* Prevent it from being too tall */
-    height: auto; /* Maintain aspect ratio */
-    width: auto; /* Maintain aspect ratio */
-    display: block; /* Eliminate inline spacing issues */
+    height: auto;
+    width: auto;
+    object-fit: contain; /* Ensure no cropping */
 }
 
 /* Social media container */
-.social_media_container {
+.social_container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 15px; /* Spacing between buttons */
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
+    gap: 15px; /* Space between buttons */
+    padding: 20px 0;
 }
 
-/* Social button styles */
 .social_button {
     width: 48px;
     height: 48px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     border-radius: 50%;
     background-color: #E2D4B1;
-    color: #000;
     text-decoration: none;
-    transition: transform 0.2s, background-color 0.2s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .social_button:hover {
@@ -73,7 +69,7 @@ body, html {
     background-color: #e2d4b9;
 }
 
-.social_icon {
+.social_button svg {
     width: 24px;
     height: 24px;
     fill: currentColor;
@@ -81,34 +77,34 @@ body, html {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .logo img {
-        max-width: 80%; /* Slightly smaller logo on tablets */
+    .logo_container img {
+        max-width: 80%; /* Adjust size for smaller devices */
         max-height: 60%;
     }
 
     .social_button {
-        width: 40px; /* Smaller buttons for smaller devices */
+        width: 40px;
         height: 40px;
     }
 
-    .social_icon {
+    .social_button svg {
         width: 20px;
         height: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .logo img {
-        max-width: 90%; /* Ensure the logo fits smaller screens */
+    .logo_container img {
+        max-width: 90%; /* Adjust size for very small screens */
         max-height: 50%;
     }
 
     .social_button {
-        width: 36px; /* Adjust button size for mobile */
+        width: 36px;
         height: 36px;
     }
 
-    .social_icon {
+    .social_button svg {
         width: 18px;
         height: 18px;
     }
