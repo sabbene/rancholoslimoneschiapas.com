@@ -1,35 +1,47 @@
 /* Reset and global styles */
 body, html {
-    height: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
     font-family: Arial, sans-serif;
     background-color: #E2D4B1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    overflow: hidden; /* Prevent accidental scrolling */
+    justify-content: center;
+}
+
+/* Wrapper for content */
+.content_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden; /* Ensure no content spills outside */
 }
 
 /* Center container for the logo */
 .center_container {
-    flex-grow: 1; /* Use available space */
+    flex: 1; /* Take up remaining space between top and bottom */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Full viewport width */
-    padding: 0; /* Remove extra padding */
+    width: 100%;
+    padding: 0;
     box-sizing: border-box;
 }
 
 /* Logo styling */
 .logo img {
-    display: block; /* Remove inline gaps caused by inline elements */
-    max-width: 100%; /* Prevent overflow horizontally */
-    max-height: 100%; /* Prevent overflow vertically */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 90%; /* Scale within the container */
+    max-height: 90%; /* Prevent overflowing */
     width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Eliminate inline spacing issues */
     object-fit: contain; /* Ensure the entire image is visible */
 }
 
@@ -38,9 +50,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    width: 100%; /* Full width */
-    padding: 15px;
+    gap: 10px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -76,29 +87,18 @@ body, html {
         padding: 10px; /* Add slight padding for smaller screens */
     }
 
+    .logo img {
+        max-width: 80%; /* Further reduce image size */
+        max-height: 80%;
+    }
+
     .social_button {
-        width: 40px; /* Smaller buttons for mobile */
+        width: 40px; /* Adjust button size */
         height: 40px;
     }
 
     .social_icon {
         width: 20px;
         height: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .center_container {
-        padding: 5px;
-    }
-
-    .social_button {
-        width: 36px; /* Further reduce button size for very small screens */
-        height: 36px;
-    }
-
-    .social_icon {
-        width: 18px;
-        height: 18px;
     }
 }
