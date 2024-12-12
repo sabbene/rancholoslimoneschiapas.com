@@ -1,4 +1,4 @@
-/* Reset and global styles */
+/* Reset Styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -6,45 +6,40 @@ body, html {
     height: 100%;
     font-family: Arial, sans-serif;
     background-color: #E2D4B1;
+    overflow: hidden; /* Prevent scrolling */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Wrapper for content */
 .content_wrapper {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 /* Center container for the logo */
 .center_container {
+    flex: 1; /* Take up the available space */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1; /* Allow the logo to take up remaining space */
     width: 100%;
-    height: auto;
     box-sizing: border-box;
 }
 
 /* Logo styling */
 .logo img {
-    max-width: 90%; /* Scale to fit within its container */
-    max-height: 70%; /* Prevent overflowing vertically */
-    width: auto; /* Maintain aspect ratio */
+    max-width: 70%; /* Scale logo to fit within the container */
+    max-height: 70%; /* Prevent it from being too tall */
     height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove inline spacing issues */
-    object-fit: contain; /* Ensure the logo is not cropped */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Eliminate inline spacing issues */
 }
 
 /* Social media container */
@@ -52,7 +47,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 15px; /* Spacing between buttons */
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
@@ -87,8 +82,8 @@ body, html {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .logo img {
-        max-width: 80%; /* Adjust for smaller screens */
-        max-height: 60%; /* Adjust for smaller screens */
+        max-width: 80%; /* Slightly smaller logo on tablets */
+        max-height: 60%;
     }
 
     .social_button {
@@ -99,5 +94,22 @@ body, html {
     .social_icon {
         width: 20px;
         height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 90%; /* Ensure the logo fits smaller screens */
+        max-height: 50%;
+    }
+
+    .social_button {
+        width: 36px; /* Adjust button size for mobile */
+        height: 36px;
+    }
+
+    .social_icon {
+        width: 18px;
+        height: 18px;
     }
 }
