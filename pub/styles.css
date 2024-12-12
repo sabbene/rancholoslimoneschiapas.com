@@ -2,25 +2,8 @@
 body, html {
     height: 100%;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
     background-color: #E2D4B1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Wrapper for the content */
-.content_wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%; /* Full viewport height */
-    width: 100%; /* Full viewport width */
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 /* Center container styles */
@@ -29,13 +12,27 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%; /* Ensure it scales with the viewport width */
+    overflow: hidden; /* Prevent accidental overflow */
 }
 
 .logo {
-    max-width: fit-content;
-    height: auto;
+    max-width: 90%; /* Limit width to fit within mobile screens */
+    max-height: 90%; /* Ensure it doesn’t exceed viewport height */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Maintain aspect ratio */
     border: 0px solid #ccc;
     border-radius: 0px;
+    object-fit: contain; /* Prevent cropping */
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 80%; /* Adjust width for smaller devices */
+        max-height: 80%;
+    }
 }
 
 /* Social media container */
@@ -43,7 +40,7 @@ body, html {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .social_button {
@@ -62,7 +59,7 @@ body, html {
 
 .social_button:hover {
     transform: scale(1.1);
-    background-color: #efe5cd;
+    background-color: #e2d4b9;
 }
 
 .social_icon {
