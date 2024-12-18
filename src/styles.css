@@ -1,0 +1,72 @@
+/* Reset and global styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #E2D4B1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper for the content */
+.content_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; /* Full viewport height */
+    width: 100%; /* Full viewport width */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Center container styles */
+.center_container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    border: 0px solid #ccc;
+    border-radius: 0px;
+}
+
+/* Social media container */
+.social_media_container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.social_button {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #E2D4B1;
+    color: #000000;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social_button:hover {
+    transform: scale(1.1);
+    background-color: #efe5cd;
+}
+
+.social_icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
