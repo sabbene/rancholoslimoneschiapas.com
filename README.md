@@ -26,3 +26,9 @@ Rancho Los Limones Chiapas is a small farm in southern Mexico growing mangos and
 To start the project locally, run:
 ```sh
 npm start
+```
+This will launch the website on http://localhost:3000.
+
+## Contact Information
+
+For support or questions, please contact Stephen Abbene at sabbene87@gmail.com
