@@ -1,12 +1,9 @@
 import React from 'react';
-import Logo from './components/Logo';
-import SocialMedia from './components/SocialMedia';
 
 function App() {
   return (
     <div>
-      <Logo />
-      <SocialMedia />
+      <h1>Hello, World!</h1>
     </div>
   );
 }
